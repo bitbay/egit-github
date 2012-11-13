@@ -36,6 +36,8 @@ public class Repository implements IRepositoryIdProvider, Serializable {
 	@SerializedName("private")
 	private boolean isPrivate;
 
+	private boolean autoInit;
+
 	private Date createdAt;
 
 	private Date pushedAt;
@@ -159,6 +161,22 @@ public class Repository implements IRepositoryIdProvider, Serializable {
 	 */
 	public Repository setPrivate(boolean isPrivate) {
 		this.isPrivate = isPrivate;
+		return this;
+	}
+
+	/**
+	 * @return autoInit
+	 */
+	public boolean isAutoInit() {
+		return autoInit;
+	}
+
+	/**
+	 * @param autoInit
+	 * @return this repository
+	 */
+	public Repository setAutoInit(boolean autoInit) {
+		this.autoInit = autoInit;
 		return this;
 	}
 
